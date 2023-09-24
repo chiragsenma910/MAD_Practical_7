@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebSettings
 import androidx.core.view.WindowCompat
-import com.example.mad_prac7_106_5b6.databinding.ActivityMainBinding
 import com.example.mad_prac7_106_5b6.databinding.ActivityYoutubeBinding
 
 class YoutubeActivity : AppCompatActivity() {
@@ -20,13 +19,13 @@ class YoutubeActivity : AppCompatActivity() {
             Intent(this,MainActivity::class.java).also{startActivity(it)}
         }
     }
-    private val youtubeId="fJn9B64Znrk"
+    private val youtubeId="6stlCkUDG_s"
 
     private fun initYoutubePlayer(){
         val webSettings:WebSettings=binding.youtubeWebView.settings
         webSettings.javaScriptEnabled=true
         webSettings.loadWithOverviewMode=true
         webSettings.useWideViewPort=true
-        binding.youtubeWebView.loadUrl("https:www.youtube.com/embed/$youtubeId")
+        binding.youtubeWebView.loadUrl("https://www.youtube.com/embed/$youtubeId")
     }
 }
